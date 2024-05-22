@@ -71,6 +71,25 @@ void Write(u32 romaddress, const u8* buffer, u32 size)
 	}
 }
 //------------------------------------------------------------------
+void Patch_somegame(u32 *Data)
+{
+	u32 size = 0x7FF0;
+	if( *(u32*)GAMECODE == 0x50424732 )
+	{
+		for(u32 ii=0;ii<0x100;ii++)
+		{
+			if(0x3000000==Data[ii])
+			{
+				if(0x8000 ==Data[ii+1] )
+				{
+					Write((ii+1)*4,(u8*)&size,4 );
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------------
 bool IWRAM_CODE PatchDragonBallZ(u32 *Data)
 {
   bool res=false;
@@ -1417,21 +1436,3 @@ void Patch_SpecialROM_TrimSize(void)
 	}	
 }
 */
-//------------------------------------------------------------------
-void Patch_somegame(u32 *Data)
-{
-	u32 size = 0x7FF0;
-	if( *(u32*)GAMECODE == 0x50424732 )
-	{
-		for(u32 ii=0;ii<0x100;ii++)
-		{
-			if(0x3000000==Data[ii])
-			{
-				if(0x8000 ==Data[ii+1] )
-				{
-					Write((ii+1)*4,(u8*)&size,4 );
-				}
-			}
-		}
-	}
-}

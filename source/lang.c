@@ -486,15 +486,15 @@ void LoadChinese(void)
 	gl_rom_menu = (char**)zh_rom_menu;
 	gl_nor_op = (char**)zh_nor_op;
 
-	gl_copying_data = (char**)zh_copying_data;
+	gl_copying_data = (char*)zh_copying_data;
 
-	gl_generating_emu = (char**)zh_generating_emu;
+	gl_generating_emu = (char*)zh_generating_emu;
 
 	gl_enabled = (char*)zh_enabled;
 	gl_disabled = (char*)zh_disabled;
 
 	// For Chinese, Use old font
-	ASC_DATA = ASC_DATA_OLD;
+	ASC_DATA = (unsigned char*)ASC_DATA_OLD;
 
 }
 //---------------------------------------------------------------------------------
@@ -603,13 +603,13 @@ void LoadEnglish(void)
 	gl_rom_menu = (char**)en_rom_menu;
 	gl_nor_op = (char**)en_nor_op;
 
-	gl_copying_data = (char**)en_copying_data;
+	gl_copying_data = (char*)en_copying_data;
 
-	gl_generating_emu = (char**)en_generating_emu;
+	gl_generating_emu = (char*)en_generating_emu;
 
 	gl_enabled = (char*)en_enabled;
 	gl_disabled = (char*)en_disabled;
 
 	// For English, Use new font
-	ASC_DATA = ASC_DATA_NEW;
+	ASC_DATA = (unsigned char*)ASC_DATA_NEW;
 }
