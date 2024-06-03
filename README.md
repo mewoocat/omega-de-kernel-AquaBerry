@@ -5,4 +5,6 @@
 ## Installation and Info:
 https://github.com/ez-flash/omega-de-kernel
 
+Note that modifying the bmp files via gimp prevents GRIT from reading them.  MS Painst has been tested to work
+
 ## Photos
