@@ -5,8 +5,9 @@
 ## Installation and Info:
 https://github.com/ez-flash/omega-de-kernel
 https://github.com/Sterophonick/omega-de-kernel
+https://sterophonick.github.io/projects/howtoskinsimple/
 
-Note that modifying the bmp files via gimp prevents GRIT from reading them.  MS Paint has been tested to work.
+Note that modifying the bmp files via gimp prevents GRIT from reading them.  Opening and saving the files edited in gimp using MS Paint has been tested to work.
 
 ## Photos
 #### v1
